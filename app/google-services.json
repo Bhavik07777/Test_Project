@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "188167314489",
+    "project_id": "testproject-b2f03",
+    "storage_bucket": "testproject-b2f03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188167314489:android:7b27dc9e2e1ac8043941e8",
+        "android_client_info": {
+          "package_name": "mrigapps.android.test_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188167314489-04p2tp45biomoclhdijoemcagma2dfa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTm87z98m9M5Cqv6dIW76F5doFAASKsFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188167314489-04p2tp45biomoclhdijoemcagma2dfa4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

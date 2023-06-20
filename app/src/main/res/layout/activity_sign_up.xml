@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageview"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/car2" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/imageview"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/edName"
+            android:hint="Name"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"/>
+
+
+        <EditText
+            android:id="@+id/edemail"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape"
+            android:paddingLeft="10dp"
+            android:layout_height="40dp"/>
+
+
+
+
+        <EditText
+            android:id="@+id/edpassword"
+            android:paddingLeft="10dp"
+            android:hint="Password"
+            android:background="@drawable/shape"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="#AD1414"
+            android:text="LOG IN"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="200dp"
+            android:text="SIGN UP"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="#AD1414"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/btnSignUp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
