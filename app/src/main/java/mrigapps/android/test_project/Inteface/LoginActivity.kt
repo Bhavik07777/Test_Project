@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        supportActionBar?.hide()
+
 
 
         edtemail = findViewById(R.id.edemail)
@@ -34,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         btnsignup.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
+            finish()
             startActivity(intent)
         }
 

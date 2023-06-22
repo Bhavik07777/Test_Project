@@ -5,7 +5,7 @@ class User {
     var uemail:String?=null
     var uname:String?=null
 
-
+    constructor(){}
     constructor(uid: String, uemail: String?, uname: String?) {
         this.uid = uid
         this.uemail = uemail
@@ -13,5 +13,7 @@ class User {
 
 
     }
+
+
 }
 

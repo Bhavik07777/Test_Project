@@ -37,9 +37,6 @@ class SignUp : AppCompatActivity() {
         btnsignup=findViewById(R.id.btnSignUp)
 
         mAuth= FirebaseAuth.getInstance()
-
-
-
         btnsignup.setOnClickListener {
 
             val name=edname.text.toString()
@@ -58,6 +55,7 @@ class SignUp : AppCompatActivity() {
                 if (task.isSuccessful) {
                     adduserDatabase(name,email, mAuth.currentUser?.uid!!)
                     val intent=Intent(this@SignUp, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(applicationContext,"Please first enter details ",Toast.LENGTH_LONG).show()
