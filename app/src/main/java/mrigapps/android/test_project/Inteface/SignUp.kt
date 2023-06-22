@@ -3,6 +3,7 @@ package mrigapps.android.test_project.Inteface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings.Global.putString
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -35,7 +36,6 @@ class SignUp : AppCompatActivity() {
         edname=findViewById(R.id.edName)
         btnlogin=findViewById(R.id.btnlogin)
         btnsignup=findViewById(R.id.btnSignUp)
-
         mAuth= FirebaseAuth.getInstance()
         btnsignup.setOnClickListener {
 

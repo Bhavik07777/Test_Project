@@ -16,8 +16,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var edtpassword: EditText
     private lateinit var btnsignup: Button
     private lateinit var btnlogin: Button
-
-
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +29,13 @@ class LoginActivity : AppCompatActivity() {
         btnlogin = findViewById(R.id.btnlogin)
         btnsignup = findViewById(R.id.btnSignUp)
 
+        val sharedPreferences = getSharedPreferences("login_credentials",MODE_PRIVATE)
+        val savedEmail = sharedPreferences.getString("email", null)
+        val savedPassword = sharedPreferences.getString("password", null)
+        edtemail.setText(savedEmail)
+        edtpassword.setText(savedPassword)
+
+
         mAuth = FirebaseAuth.getInstance()
         btnsignup.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
@@ -42,10 +47,19 @@ class LoginActivity : AppCompatActivity() {
             val email = edtemail.text.toString()
             val password = edtpassword.text.toString()
 
+            saveCredentials(email, password)
             login(email, password)
         }
 
 
+    }
+
+    private fun saveCredentials(email: String, password: String) {
+        val sharedPreferences = getSharedPreferences("login_credentials",MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("email", email)
+        editor.putString("password", password)
+        editor.apply()
     }
 
     private fun login(email: String, password: String) {
@@ -63,5 +77,7 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+
+
     }
 }
