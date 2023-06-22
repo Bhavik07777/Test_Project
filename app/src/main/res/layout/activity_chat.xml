@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Inteface.ChatActivity">
+
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -31,7 +33,7 @@
             android:padding="10dp"
             android:layout_marginLeft="5dp"
             android:layout_weight="90"
-            android:layout_marginBottom="2dp"
+            android:layout_marginBottom="8dp"
             android:layout_height="50dp"/>
 
         <ImageView

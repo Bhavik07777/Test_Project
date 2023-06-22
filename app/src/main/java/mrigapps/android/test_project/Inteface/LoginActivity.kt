@@ -21,8 +21,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-
+        supportActionBar?.hide()
 
         edtemail = findViewById(R.id.edemail)
         edtpassword = findViewById(R.id.edpassword)
@@ -77,7 +76,6 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-
 
     }
 }

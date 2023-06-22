@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Adapter
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,24 +23,24 @@ import mrigapps.android.test_project.model.User
 
 class MainActivity : AppCompatActivity() {
 
-
-
     private lateinit var adapter: UserAdapter
     private lateinit var recyclerView: RecyclerView
     private  lateinit var userList: ArrayList<User>
     private lateinit var mAuth:FirebaseAuth
     private lateinit var txtlogout:TextView
     private lateinit var dbfire:DatabaseReference
+    private lateinit var progressLoader: ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
         mAuth=FirebaseAuth.getInstance()
         recyclerView=findViewById(R.id.rc_view)
         userList= ArrayList()
         adapter=UserAdapter(this,userList)
         txtlogout=findViewById(R.id.txtlogout)
-
+        progressLoader = findViewById(R.id.progress_loader)
 
 
         txtlogout.setOnClickListener {
@@ -63,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 adapter.notifyDataSetChanged()
+                progressLoader.visibility = View.INVISIBLE
             }
 
             override fun onCancelled(error: DatabaseError) {
