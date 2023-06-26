@@ -1,4 +1,4 @@
-package mrigapps.android.test_project.Inteface.Adapter
+package mrigapps.android.test_project.Adapter
 
 import android.content.Context
 import android.content.Intent

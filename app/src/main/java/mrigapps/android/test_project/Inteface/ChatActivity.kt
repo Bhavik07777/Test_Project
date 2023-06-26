@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import mrigapps.android.test_project.Inteface.Adapter.MessageAdapter
+import mrigapps.android.test_project.Adapter.MessageAdapter
 import mrigapps.android.test_project.R
 import mrigapps.android.test_project.model.Message
 

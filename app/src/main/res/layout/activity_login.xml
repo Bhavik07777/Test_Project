@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/imageview"
         android:layout_marginTop="150dp"
-        android:src="@drawable/car2" />
+        android:src="@drawable/chat" />
 
 
     <LinearLayout
@@ -47,7 +47,7 @@
             android:text="LOG IN"
             android:layout_marginTop="40dp"
             android:background="@drawable/shape"
-            android:backgroundTint="#AD1414"
+            android:backgroundTint="#3AC7F8"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:id="@+id/btnlogin"
@@ -58,7 +58,7 @@
             android:text="SIGN UP"
             android:layout_marginTop="20dp"
             android:background="@drawable/shape"
-            android:backgroundTint="#AD1414"
+            android:backgroundTint="#8EEABB"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:id="@+id/btnSignUp"

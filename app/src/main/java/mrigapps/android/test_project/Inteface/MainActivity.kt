@@ -17,7 +17,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import mrigapps.android.test_project.Inteface.Adapter.UserAdapter
+import mrigapps.android.test_project.Adapter.UserAdapter
 import mrigapps.android.test_project.R
 import mrigapps.android.test_project.model.User
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         mAuth=FirebaseAuth.getInstance()
         recyclerView=findViewById(R.id.rc_view)
         userList= ArrayList()
-        adapter=UserAdapter(this,userList)
+        adapter= UserAdapter(this,userList)
         txtlogout=findViewById(R.id.txtlogout)
         progressLoader = findViewById(R.id.progress_loader)
 
