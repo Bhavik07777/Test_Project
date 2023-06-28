@@ -2,8 +2,7 @@ package mrigapps.android.test_project.Inteface
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.view.ActionMode
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import mrigapps.android.test_project.R
 
-class LoginActivity : AppCompatActivity() {
 
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var edtemail: EditText
     private lateinit var edtpassword: EditText
@@ -30,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         btnlogin = findViewById(R.id.btnlogin)
         btnsignup = findViewById(R.id.btnSignUp)
 
-        val sharedPreferences = getSharedPreferences("login_credentials",MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("login_credentials", MODE_PRIVATE)
         val savedEmail = sharedPreferences.getString("email", null)
         val savedPassword = sharedPreferences.getString("password", null)
         edtemail.setText(savedEmail)
@@ -56,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun saveCredentials(email: String, password: String) {
-        val sharedPreferences = getSharedPreferences("login_credentials",MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("login_credentials", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("email", email)
         editor.putString("password", password)
@@ -79,5 +78,12 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (mAuth.currentUser != null) {
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        }
     }
 }

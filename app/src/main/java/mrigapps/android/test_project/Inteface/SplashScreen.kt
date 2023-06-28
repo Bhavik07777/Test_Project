@@ -14,13 +14,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import mrigapps.android.test_project.R
 
+
 class SplashScreen : AppCompatActivity() {
 
-    private val delayMillis: Long = 3000
-    private val fadeInDuration: Long = 3000
-    private val appNameVisibleDuration: Long = 3000
+    private val delayMillis: Long = 1000
+    private val fadeInDuration: Long = 1000
+    private val appNameVisibleDuration: Long = 1000
 
     private lateinit var appNameText: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,10 +32,11 @@ class SplashScreen : AppCompatActivity() {
         appNameText = findViewById(R.id.appnamescreen)
         appNameText.visibility = View.VISIBLE // Initially hide the app name
 
+
         // Set the application name text
         val appName = getString(R.string.app_name)
 
-        // Create a SpannableString with the combined text color
+
         val spannableString = SpannableString(appName)
 
         // Set the color spans for different parts of the text
@@ -82,7 +85,6 @@ class SplashScreen : AppCompatActivity() {
             finish()
         }, delayMillis + fadeInDuration + appNameVisibleDuration)
     }
-
 
 
 }
