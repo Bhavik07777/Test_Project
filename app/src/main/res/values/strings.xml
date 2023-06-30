@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Test_Project</string>
+    <string name="app_name">THE CHAT</string>
     <string name="appname">CHAT</string>
+    <string name="type_message">type message.....</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="update">UPDATE</string>
+    <string name="profile_change">Profile Change</string>
+    <string name="logout">Logout</string>
 </resources>

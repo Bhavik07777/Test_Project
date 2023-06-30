@@ -38,7 +38,7 @@
         android:background="@drawable/shapemessagebtn"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:visibility="visible"
+        android:visibility="gone"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="10dp"

@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inteface.LoginActivity">
+    tools:context=".Inteface.Edit_profile">
 
 
     <ImageView
+        android:id="@+id/imageview"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/imageview"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/chat" />
 
 
@@ -20,18 +21,20 @@
         android:layout_width="match_parent"
         android:id="@+id/linearlayout"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginHorizontal="20dp"
         android:layout_below="@id/imageview"
         android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/edemail"
-        android:hint="Email"
-        android:layout_width="match_parent"
-        android:background="@drawable/shape"
-        android:paddingLeft="10dp"
-        android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edName"
+            android:hint="Name"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"
+            android:drawableRight="@drawable/edit_text_drawable" />
 
         <EditText
             android:id="@+id/edpassword"
@@ -40,35 +43,24 @@
             android:background="@drawable/shape"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
+            android:drawableRight="@drawable/edit_text_drawable"
             android:layout_height="40dp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="200dp"
-            android:text="LOG IN"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/shape"
-            android:backgroundTint="#3AC7F8"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
-            android:id="@+id/btnlogin"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"/>
+
+
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpdate"
             android:layout_width="200dp"
-            android:text="SIGN UP"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="40dp"
             android:background="@drawable/shape"
             android:backgroundTint="#8EEABB"
-            android:textColor="@color/white"
             android:layout_gravity="center"
-            android:id="@+id/btnSignUp"
+            android:text="@string/update"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>

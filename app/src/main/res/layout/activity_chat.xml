@@ -29,9 +29,9 @@
             android:layout_width="wrap_content"
             android:id="@+id/messagebox"
             android:background="@drawable/shapemessage"
-            android:hint="type message....."
+            android:hint="@string/type_message"
             android:padding="10dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_weight="90"
             android:layout_marginBottom="8dp"
             android:layout_height="50dp"/>
@@ -42,5 +42,16 @@
             android:layout_weight="10"
             android:src="@drawable/baseline_send_24"
             android:layout_height="50dp"/>
+
+
+        <ImageView
+            android:id="@+id/typingIndicator"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/chat"
+            android:visibility="gone" />
     </LinearLayout>
 </RelativeLayout>

@@ -2,7 +2,6 @@ package mrigapps.android.test_project.Inteface
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.ActionMode
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -68,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
+                    Toast.makeText(this,"Login Succesfully ",Toast.LENGTH_LONG).show()
                 } else {
 
                     Toast.makeText(
@@ -82,8 +82,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        if (mAuth.currentUser != null) {
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-        }
+        if (mAuth.currentUser != null) startActivity(Intent(this@LoginActivity, MainActivity::class.java))
     }
+
 }

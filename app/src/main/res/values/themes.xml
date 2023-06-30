@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.Test_Project" parent="Theme.MaterialComponents.DayNight">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Modify or add the colorPrimary attribute -->
+        <item name="colorPrimary">#28BCF6</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
     </style>
 
     <style name="Theme.Test_Project" parent="Base.Theme.Test_Project" />

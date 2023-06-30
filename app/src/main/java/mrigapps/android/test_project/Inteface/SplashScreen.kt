@@ -27,6 +27,7 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
+
         supportActionBar?.hide()
 
         appNameText = findViewById(R.id.appnamescreen)
@@ -77,7 +78,7 @@ class SplashScreen : AppCompatActivity() {
 
         // Apply the animation to the TextView
         appNameText.startAnimation(fadeInAnimation)
-
+        //Bhavik's Code
         // Start the LoginActivity after the delay
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@SplashScreen, LoginActivity::class.java)

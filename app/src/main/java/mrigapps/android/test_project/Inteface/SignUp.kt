@@ -57,6 +57,7 @@ class SignUp : AppCompatActivity() {
                     val intent=Intent(this@SignUp, MainActivity::class.java)
                     finish()
                     startActivity(intent)
+                    Toast.makeText(this,"Sign Up Succesfully ",Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(applicationContext,"Please first enter details ",Toast.LENGTH_LONG).show()
                 }

@@ -1,6 +1,4 @@
 package mrigapps.android.test_project
-
-
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
@@ -11,18 +9,15 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
-
 class MyFirebaseInstanceIDService: FirebaseMessagingService() {
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
 
         remoteMessage.notification?.let { notification ->
-            // Extract notification data
             val title = notification.title
             val body = notification.body
 
-            // Create and show notification
             createNotificationChannel()
             showNotification(title, body)
 

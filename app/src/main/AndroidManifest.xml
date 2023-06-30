@@ -15,12 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test_Project"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Inteface.Edit_profile"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/chat" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/white" />
@@ -33,7 +34,7 @@
             android:exported="false" />
         <activity
             android:name=".Inteface.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,20 +44,17 @@
         <activity
             android:name=".Inteface.LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".Inteface.MainActivity"
             android:exported="false" />
 
         <service
-            android:name=".Inteface.ChatActivity$MyFirebaseMessagingService"
+            android:name=".Inteface.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-
     </application>
 
 </manifest>
